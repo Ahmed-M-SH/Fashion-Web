@@ -21,14 +21,7 @@
             <div class="admin-dashboard text-center">
         <div class="container">
         	
-            <div>
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3 jumbotron" >
-                    <a href="adminemp.php" class="btn btn-primary btn-lg"> فاتورة شراء</a><br><br>
-                    <a href="admineprod.php" class="btn btn-primary btn-lg"> فاتورة بيع</a><br><br>
-                        <a href="addstudent.php" class="btn btn-primary btn-lg"> فاتورة مرتجع </a><br><br>
-                    </div>
-                </div>
+           
             </div>
         </div>
 </div>
