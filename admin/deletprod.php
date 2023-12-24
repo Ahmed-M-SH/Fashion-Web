@@ -3,7 +3,18 @@
 <?php echo AdminAreaAccess(); ?>
 
 <?php include('../header.php') ?>
-<?php include('admin.header.php') ?>
+
+<div class="header-section jumbotron">
+	
+			<div class="col-md-12">
+				<h2 class="text-center">
+					<span><a href="admineprod.php" class="btn btn-info" style="float: right;">عوده</a>
+                    </span>
+				</h2>
+              
+               		
+			</div>
+		</div>
 
 
 <div class="container">
@@ -38,9 +49,9 @@
 	include('../dbcon.php');
 	if (isset($_POST['search'])) {
 
-		$rollno = $_POST['rollno'];
+		$Rollno = $_POST['rollno'];
 
-		$sql = "SELECT * FROM `prod` WHERE `rollno` = '$rollno'";
+		$sql = "SELECT * FROM `prod` WHERE `rollno` = '$Rollno'";
 
 		$result = mysqli_query($conn,$sql);
 		if (mysqli_num_rows($result)>0) {

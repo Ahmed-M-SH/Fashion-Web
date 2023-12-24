@@ -39,9 +39,6 @@ $r = mysqli_query($conn,"select * from emplo");
                <th>address </th>
                <th>salary </th>
                 <th>job </th>
-                <th name ="del">حذف 
-                </th>
-                <th>تعديل </th>
              </thead>
                                     <tfoot>
                                         

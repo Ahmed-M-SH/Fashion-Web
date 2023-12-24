@@ -6,13 +6,13 @@
 
 	include('../dbcon.php');
 	$update_record= $_GET['Update'];
-	$sql = "select * from products where id = '$update_record'";
+	$sql = "select * from prod where id = '$update_record'";
 	$result = mysqli_query($conn,$sql);
 
 	while ($data_row = mysqli_fetch_assoc($result)) {
 		$update_id = $data_row['id'];
 				$rollno = $data_row['rollno'];
-				$Name_pro = $data_row['Name_pro'];
+				$Name_pro = $data_row['Name_prod'];
 				$Type = $data_row['Type'];
 				$Quantity = $data_row['Quantity'];
 		
@@ -26,7 +26,18 @@
 
 <?php include('../header.php') ?>
 
-<?php include('admin.header.php') ?>
+
+<div class="header-section jumbotron">
+	
+			<div class="col-md-12">
+				<h2 class="text-center">
+					<span><a href="admineprod.php" class="btn btn-info" style="float: right;">عوده</a>
+                    </span>
+				</h2>
+              
+               		
+			</div>
+		</div>
 
 <div class="container jumbotron">
 	<div class="row">
@@ -66,12 +77,12 @@
 			include ('../dbcon.php');
 			$id = $_GET['update_id'];
 			$rollno=$_POST['rollno'];
-			$Name_pro=$_POST['Name_pro'];
+			$Name_pro=$_POST['Name_prod'];
 			$Type=$_POST['Type'];
 			$Quantity=$_POST['Quantity'];
 			
 
-			$sql = "UPDATE products SET id='$id', rollno = '$rollno', Name_pro = '$Name_pro', Type ='$Type',  Quantity = '$Quantity' WHERE id = '$id'";
+			$sql = "UPDATE prod SET id='$id', rollno = '$rollno', Name_prod = '$Name_pro', Type ='$Type',  Quantity = '$Quantity' WHERE id = '$id'";
 
 			$Execute = mysqli_query($conn,$sql);
 

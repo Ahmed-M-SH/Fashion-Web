@@ -27,7 +27,7 @@
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3 jumbotron" >
                    
-                    <a href="../admin/pord/addprod.php" class="btn btn-primary btn-lg" name="addpord">اضافه منتج</a><br><br>
+                    <a href="addprod.php" class="btn btn-primary btn-lg" name="addpord">اضافه منتج</a><br><br>
                         <a href="updatprod.php" class="btn btn-primary btn-lg">تعديل تفاصيل المنتجات</a><br><br>
                         <a href="deletprod.php" class="btn btn-primary btn-lg">حذف المنتجات</a>   
                     </div>

@@ -4,13 +4,18 @@
 
 <?php include('../header.php') ?>
 
-<?php include('admin.header.php') ?>
-<div>
-<h2 class="text-center">
-					<span><a href="admindash.php" class="btn btn-info" style="float: right;">عوده</a>
+
+<div class="header-section jumbotron">
+	
+			<div class="col-md-12">
+				<h2 class="text-center">
+					<span><a href="adminemp.php" class="btn btn-info" style="float: right;">عوده</a>
                     </span>
 				</h2>
-</div>
+              
+               		
+			</div>
+		</div>
 <div class="container jumbotron">
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3">

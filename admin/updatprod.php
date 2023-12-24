@@ -3,18 +3,25 @@
 <?php echo AdminAreaAccess(); ?>
 
 <?php include('../header.php') ?>
-<?php include('admin.header.php') ?>
-<div class="container">
-	<div class="row">
+
+<div class="header-section jumbotron">
+	
+			<div class="col-md-12">
+				<h2 class="text-center">
+					<span><a href="admineprod.php" class="btn btn-info" style="float: right;">عوده</a>
+                    </span>
+				</h2>
+              
+               		
+			</div>
+		</div>
+		<div class="row">
 		<div class="col-md-6 col-md-offset-3  jumbotron ">
 			<div  style="text-align: center;">
 				<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" enctype="multipart/form-data" >
-				 اختيار النوع: <select name="Type" class="btn btn-info" style="margin-right: 30px;">	
-                    <option>اختيار النوع</option>
-                                    <option>mukup</option>
-                                    
-								</select>
-
+				   <div class="form-group">
+				      رقم المنتج .:<input type="text" class="form-control" name="Job" placeholder="ادخل رقم المنتج الموظف" >
+				  </div>
 				<input type="submit" name="search" value="بحث" class="btn btn-success">
 			</form>
 			</div>
@@ -41,9 +48,9 @@
 	include('../dbcon.php');
 	if (isset($_POST['search'])) {
 
-		$Type = $_POST['Type'];
+		$Rollno = $_POST['rollno'];
 
-		$sql = "SELECT * FROM `prod` WHERE `Type` = '$Type'";
+		$sql = "SELECT * FROM `prod` WHERE `rollno` = '$Rollno'";
 
 		$result = mysqli_query($conn,$sql);
 		if (mysqli_num_rows($result)>0) {
